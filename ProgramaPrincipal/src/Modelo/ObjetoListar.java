@@ -34,4 +34,8 @@ public abstract class ObjetoListar {
     }
     public abstract String[] obtenerColumnas();
     public abstract void abrirSiguientePagina();
+    public abstract void actualizarInformacion();
+    public abstract void obtenerInformacion();
+    public abstract void eliminarObjeto();
+    public abstract void crearObjeto();
 }

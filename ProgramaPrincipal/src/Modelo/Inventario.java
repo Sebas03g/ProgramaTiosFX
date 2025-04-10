@@ -26,4 +26,26 @@ public class Inventario extends ObjetoListar{
     public void abrirSiguientePagina() {
 
     }
+
+    @Override
+    public void actualizarInformacion() {
+
+    }
+
+    @Override
+    public void obtenerInformacion() {
+
+    }
+
+    @Override
+    public void eliminarObjeto() {
+
+    }
+
+    @Override
+    public void crearObjeto() {
+        
+    }
+
+
 }
