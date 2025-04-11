@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Inventario;
 import Modelo.ObjetoListar;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,25 +21,24 @@ public class CoordinadorVentanas {
         stage.show();
     }
 
-    public static <T extends ObjetoListar> void abrirVentanaLista(String titulo, HashMap<String, T> mapa, String[] columnas) throws Exception {
+    public static <T extends ObjetoListar> void abrirVentanaLista(ObjetoListar objetoListar) throws Exception {
         FXMLLoader loader = new FXMLLoader(CoordinadorVentanas.class.getResource("../Vista/VistaListar.fxml"));
         Parent root = loader.load();
 
         // Obtener el controlador y pasarle los datos
         ControladorLista<T> controlador = loader.getController();
-        controlador.inicializarDatos(titulo, mapa, columnas);
+        controlador.inicializarDatos(objetoListar);
 
         Stage stage = new Stage();
-        stage.setTitle(titulo);
+        stage.setTitle(objetoListar.obtenerTitulo());
         stage.setScene(new Scene(root));
         stage.show();
     }
 
-    public static <T extends ObjetoListar> void abrirVentanaInventario(String titulo, ObjetoListar objeto) throws Exception {
+    public static <T extends ObjetoListar> void abrirVentanaInventario(ObjetoListar objeto, String id) throws Exception {
         FXMLLoader loader = new FXMLLoader(CoordinadorVentanas.class.getResource("../Vista/VistaElementoInventario.fxml"));
         Parent root = loader.load();
         Stage stage = new Stage();
-        stage.setTitle(titulo);
         stage.setScene(new Scene(root));
         stage.show();
     }

@@ -4,14 +4,20 @@ import java.util.ArrayList;
 
 public class Inventario extends ObjetoListar{
 
+
     @Override
-    public ArrayList<String> retornarInformacionElemento() {
+    public String obtenerTitulo() {
         return null;
     }
 
     @Override
-    public ArrayList<String> obtenerInformacionElemento() {
-        return null;
+    public String[] retornarInformacionElemento(String id) {
+        return new String[0];
+    }
+
+    @Override
+    public String[] obtenerInformacionElemento(String id) {
+        return new String[0];
     }
 
     @Override
@@ -20,29 +26,32 @@ public class Inventario extends ObjetoListar{
     }
 
     @Override
-    public void abrirSiguientePagina() {
+    public void abrirSiguientePagina(String id) {
 
     }
 
     @Override
-    public void actualizarInformacion() {
+    public void actualizarInformacion(String id) {
 
     }
 
     @Override
-    public void obtenerInformacion() {
+    public void obtenerInformacion(String id) {
 
     }
 
     @Override
-    public void eliminarObjeto() {
+    public void eliminarObjeto(String id) {
 
     }
 
     @Override
-    public void crearObjeto() {
+    public void crearObjeto(String[] valores) {
 
     }
 
-
+    @Override
+    public Boolean buscarObjeto(String id) {
+        return null;
+    }
 }

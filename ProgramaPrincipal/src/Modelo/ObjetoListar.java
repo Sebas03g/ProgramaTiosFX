@@ -6,10 +6,6 @@ import java.util.function.BiConsumer;
 
 public abstract class ObjetoListar {
 
-    private String sentenciaObtenerDatos;
-    private String sentenciaObtenerTransacciones;
-    private String id;
-    private String nombre;
     private ArrayList<String> ids;
 
     private BiConsumer<String, ObjetoListar> accion;
@@ -17,20 +13,19 @@ public abstract class ObjetoListar {
     public void setAccion(BiConsumer<String, ObjetoListar> accion) {
         this.accion = accion;
     }
-    public void ejecutarAccion() {
+    public void ejecutarAccion(String Id) {
         if (accion != null) {
-            accion.accept(this.nombre, this);
+            accion.accept(Id, this);
         }
     }
-    public abstract ArrayList<String> retornarInformacionElemento();
-    public abstract ArrayList<String> obtenerInformacionElemento();
-    public String retornarId(){
-        return this.id;
-    }
+    public abstract  String obtenerTitulo();
+    public abstract String[] retornarInformacionElemento(String id);
+    public abstract String[] obtenerInformacionElemento(String id);
     public abstract String[] obtenerColumnas();
-    public abstract void abrirSiguientePagina();
-    public abstract void actualizarInformacion();
-    public abstract void obtenerInformacion();
-    public abstract void eliminarObjeto();
-    public abstract void crearObjeto();
+    public abstract void abrirSiguientePagina(String id);
+    public abstract void actualizarInformacion(String id);
+    public abstract void obtenerInformacion(String id);
+    public abstract void eliminarObjeto(String id);
+    public abstract void crearObjeto(String[] valores);
+    public abstract Boolean buscarObjeto(String id);
 }

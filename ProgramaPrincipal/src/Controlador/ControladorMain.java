@@ -9,6 +9,7 @@ public class ControladorMain {
 
     @FXML
     private void handleIventarioBoton(ActionEvent event) throws IOException{
+        // AQUI SE CREA EL OBJETO INVENTARIO
         //CoordinadorVentanas.abrirVentanaLista();
 
     }

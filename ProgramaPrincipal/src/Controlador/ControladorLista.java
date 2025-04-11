@@ -14,16 +14,12 @@ import java.util.Map;
 
 public class ControladorLista<T extends ObjetoListar> {
 
-    private T objeto;
-    private HashMap<String, T> mapa;
-    private String[] columnas;
-
+    private ObjetoListar objeto;
     @FXML
     private TableView<Map<String, String>> tablaDinamica;
 
-    public void inicializarDatos(String titulo, HashMap<String, T> mapa, String[] columnas) {
-        this.mapa = mapa;
-        this.columnas = columnas;
+    public void inicializarDatos(ObjetoListar objeto) {
+        this.objeto = objeto;
         // lógica para poblar la tabla con columnas, usando `mapa`...
     }
 
@@ -50,8 +46,7 @@ public class ControladorLista<T extends ObjetoListar> {
     @FXML
     public void handleAbrirElemento() {
         Map<String, String> seleccionado = tablaDinamica.getSelectionModel().getSelectedItem();
-        ObjetoListar elemento = mapa.get(seleccionado.get("Id"));
-        elemento.ejecutarAccion();
+        objeto.ejecutarAccion(seleccionado.get("Id"));
 
     }
 }

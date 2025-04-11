@@ -4,10 +4,9 @@ import Modelo.Inventario;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class ControlodarElementoInventario {
+public class ControladorElementoInventario {
     private Inventario objeto;
     private String titulo;
 
