@@ -13,7 +13,7 @@ public class SentenciasSQL {
         return rs;
     }
 
-    public void IngresoInformacion(Connection conn, PreparedStatement ps) throws SQLException {
+    public void modificacionInformacion(Connection conn, PreparedStatement ps) throws SQLException {
         ps.executeQuery();
         conn.close();
     }

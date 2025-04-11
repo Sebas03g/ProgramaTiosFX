@@ -10,14 +10,9 @@ public abstract class ObjetoListar {
     private String sentenciaObtenerTransacciones;
     private String id;
     private String nombre;
+    private ArrayList<String> ids;
 
     private BiConsumer<String, ObjetoListar> accion;
-
-    public ObjetoListar(String id){
-        this.sentenciaObtenerDatos = sentenciaObtenerDatos;
-        this.sentenciaObtenerTransacciones = sentenciaObtenerTransacciones;
-        this.id = id;
-    }
 
     public void setAccion(BiConsumer<String, ObjetoListar> accion) {
         this.accion = accion;

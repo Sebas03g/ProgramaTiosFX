@@ -3,9 +3,6 @@ package Modelo;
 import java.util.ArrayList;
 
 public class Inventario extends ObjetoListar{
-    public Inventario(String id) {
-        super(id);
-    }
 
     @Override
     public ArrayList<String> retornarInformacionElemento() {
@@ -44,7 +41,7 @@ public class Inventario extends ObjetoListar{
 
     @Override
     public void crearObjeto() {
-        
+
     }
 
 
